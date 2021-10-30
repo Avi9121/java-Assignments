@@ -1,0 +1,35 @@
+package com.TechnoElevate.javaAssignmentsS;
+
+public class Owner {
+	Owner(int money){
+		System.out.println("Owner gives money to servent to buy a new mobile for birthday gift  : "+money);
+	}
+	
+	Owner(double spent){
+		this(20000);
+		System.out.println("Servent spent that money to buy a new Mobile : "+spent);
+	}
+	
+	Owner(String Mobile){
+		this(19250.0);
+		System.out.println("Servent buy the new one Plus "+Mobile);
+	}
+	Owner(int money,double balence){
+		this("Mobile");
+		System.out.println("Servent taken money by Owner is : "+money);
+		System.out.println("Server returns money to Owner is  : "+balence);
+		
+	}
+	public static void main(String[] args) {
+		Owner O=new Owner(20000,750.0);
+	}
+	
+}
+ 
+ 
+ Output:
+//  Owner gives money to servent to buy a new mobile for birthday gift  : 20000
+//  Servent spent that money to buy a new Mobile : 19250.0
+//  Servent buy the new one Plus Mobile
+//  Servent taken money by Owner is : 20000
+//  Server returns money to Owner is  : 750.0
