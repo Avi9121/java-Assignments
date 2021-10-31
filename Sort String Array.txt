@@ -1,0 +1,26 @@
+4. Expected Output: 
+   Original string array : [Java, Python, PHP, C#, C Programming, C++]                                           
+   Sorted string array : [C Programming, C#, C++, Java, PHP, Python] 
+
+--------------------------------------------------------------------------------------
+public class StringArray {
+	public static void main(String args[])   {  
+	    String[] string = {"Java", "Python", "PHP", "C#", "C Programming", "C++"};  
+	    int size = string.length;  
+	   
+	for(int i = 0; i<size-1; i++){  
+	      for (int j = i+1; j<string.length; j++){  
+	    
+	    	   if(string[i].compareTo(string[j])>0){  
+                     
+	    		  String temp = string[i];  
+	              string[i] = string[j];  
+	                string[j] = temp; 
+	                } 
+	      }
+	}
+	System.out.println(Arrays.toString(string));
+	}
+}                                                                                      
+--------------------------------------------------------------------------------------
+Output :  C Programming, C#, C++, Java, PHP, Python
