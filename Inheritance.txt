@@ -121,8 +121,7 @@ public class HierarchicalhildClass extends HierarchicalGrandParentClass{
 }
 public class HierarchicalGrandChildClass extends HierarchicalGrandParentClass {
 	
-	public void HierarchicalGrandChildClass()
-	   {
+	public void HierarchicalGrandChildClass(){
 	      System.out.println("Hierarchical  Grand Child  Class ");
 	   }
 
