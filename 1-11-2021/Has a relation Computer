@@ -1,0 +1,149 @@
+package techno.java.assign.hasarelationcamputer;
+
+public class Desktop {
+	int Size;
+	String resolution;
+	public Desktop(int size, String resolution) {
+		super();
+		Size = size;
+		this.resolution = resolution;
+	}
+	@Override
+	public String toString() {
+		return "Desktop [Size=" + Size + ", resolution=" + resolution + "]";
+	}
+	
+}
+==========================================================================
+package techno.java.assign.hasarelationcamputer;
+
+public class HardDrive {
+	String Storage;
+	String type;
+	public HardDrive(String storage, String type) {
+		super();
+		Storage = storage;
+		this.type = type;
+	}
+	@Override
+	public String toString() {
+		return "HardDrive [Storage=" + Storage + ", type=" + type + "]";
+	}
+	
+
+}
+====================================================================================
+package techno.java.assign.hasarelationcamputer;
+
+public class Speaker {
+ int volume;
+
+public Speaker(int volume) {
+	super();
+	this.volume = volume;
+}
+
+@Override
+public String toString() {
+	return "Speaker [volume=" + volume + "]";
+}
+ 
+}
+======================================================================================
+package techno.java.assign.hasarelationcamputer;
+public class KeyBoard {
+
+
+String Model;
+
+public KeyBoard(String model) {
+	super();
+	Model = model;
+}
+@Override
+public String toString() {
+	return "KeyBoard [Model=" + Model + "]";
+}
+
+}
+=========================================================================================
+package techno.java.assign.hasarelationcamputer;
+
+public class MotherBoard {
+String Procceser;
+String Generation;
+public MotherBoard(String procceser, String generation) {
+	super();
+	Procceser = procceser;
+	Generation = generation;
+}
+@Override
+public String toString() {
+	return "MotherBoard [Procceser=" + Procceser + ", Generation=" + Generation + "]";
+}
+
+}
+======================================================================================
+package techno.java.assign.hasarelationcamputer;
+
+public class Cooler {
+	int noOfFan;
+
+	public Cooler(int noOfFan) {
+		super();
+		this.noOfFan = noOfFan;
+	}
+
+	@Override
+	public String toString() {
+		return "Cooler [noOfFan=" + noOfFan + "]";
+	}
+	
+	
+
+}
+=====================================================================================
+package techno.java.assign.hasarelationcamputer;
+
+public class Computer {
+Desktop desktop;
+HardDrive drive;
+Speaker speaker;
+KeyBoard board;
+MotherBoard motherboard;
+Cooler cooler;
+public Computer(Desktop desktop, HardDrive drive, Speaker speaker, KeyBoard board, MotherBoard motherboard,
+		Cooler cooler) {
+	super();
+	this.desktop = desktop;
+	this.drive = drive;
+	this.speaker = speaker;
+	this.board = board;
+	this.motherboard = motherboard;
+	this.cooler = cooler;
+}
+
+public void start() {
+	System.out.println(this.desktop+" "+this.drive+" "+this.speaker+" "+this.board+" "+this.motherboard+" "+this.cooler);
+	System.out.println("Computer Started");
+}
+
+
+}
+===========================================================================================================
+package techno.java.assign.hasarelationcamputer;
+
+public class hasAMain {
+	public static void main(String[] args) {
+		Desktop desktop=new Desktop(32, "1080p");
+		MotherBoard mboard=new MotherBoard("msi","i9");
+		HardDrive hdrive=new HardDrive("512GB", "SDD");
+		KeyBoard keyBoard=new KeyBoard("k-12");
+		Speaker speaker=new Speaker(12);
+		Cooler cooler=new Cooler(3);
+		Computer computer=new Computer(desktop, hdrive, speaker, keyBoard, mboard, cooler);
+		computer.start();
+		
+	}
+
+}
