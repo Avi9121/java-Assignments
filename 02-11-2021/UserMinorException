@@ -1,0 +1,46 @@
+package techno.java.corejava.exception;
+
+import java.util.Scanner;
+
+public class MainExceptionM extends Exception {
+public static void main(String[] args) throws MinorException {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter your Age :");
+		int age1=sc.nextInt();
+		AgeForMarriage age=new AgeForMarriage();
+		age.agecal1(age1);
+
+		
+	}
+}
+=====================================================================================
+package techno.java.corejava.exception;
+
+public class MinorException extends Exception {
+
+	String msg;
+
+	public MinorException(String msg) {
+		super();
+		this.msg = msg;
+	}
+	@Override
+	public String getMessage() {
+		return msg;
+	}
+	}
+  ===========================================================================
+package techno.java.corejava.exception.assignmentex;
+
+public class UserMinorException extends Exception {
+String msg;
+
+public UserMinorException(String msg) {
+	super();
+	this.msg = msg;
+}
+@Override
+public String getMessage() {
+	return msg;
+}
+}
