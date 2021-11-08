@@ -1,0 +1,19 @@
+package techno.java.assign.TryCatch;
+
+import java.util.Scanner;
+
+		
+
+public class TryCatch {
+public static void main(String[] args) {
+
+	try {
+		System.out.println("My Name is Megha");
+		int z=10/0;
+	}catch(Exception e) {
+		System.out.println("My age is 34");
+	}finally {
+		System.out.println("My son name is Sourya");
+	}
+}
+}
