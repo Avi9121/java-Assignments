@@ -1,0 +1,31 @@
+package techno.java.assign.Polymorphism;
+
+public class PolyMain {
+		  public static void main(String[] args) {
+			  PolymorphismPragram pl= new PolymorphismPragram();
+		    pl.display();
+		    PolymorphismProgramChild p2=new PolymorphismProgramChild();
+		    p2.display();
+		  }
+}
+
+=================================================================================
+package techno.java.assign.Polymorphism;
+
+public class PolymorphismPragram {
+		  public void display() {
+		    System.out.println("I am Programming Language.");
+		  }
+		}
+ ===============================================================================
+ package techno.java.assign.Polymorphism;
+
+public class PolymorphismProgramChild extends PolymorphismPragram {
+		  @Override
+		  public void display() {
+		    System.out.println("I am Object-Oriented Programming Language.");
+		  }
+		
+
+		
+		}

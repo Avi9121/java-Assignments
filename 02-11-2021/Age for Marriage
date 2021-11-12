@@ -1,0 +1,59 @@
+package techno.java.corejava.exception.assignmentex;
+
+import java.util.Scanner;
+
+public class Age {
+int age;
+
+public Age(int age) {
+	super();
+	this.age = age;
+}
+public static void agecal(int age) throws UserMinorException {
+
+	if(age>=18) {
+		System.out.println("You are eligible for Voting");
+	}else {
+		throw new UserMinorException("UserMinorException");
+	}
+}
+}
+================================================================================================
+package techno.java.corejava.exception;
+import java.util.Scanner;
+public class AgeForMarriage {
+
+	
+
+	
+	int age;
+
+	public  AgeForMarriage() {
+		super();
+		this.age = age;
+	}
+	public static void agecal1(int age) throws MinorException {
+
+		if(age>=18) {
+			System.out.println("You are eligible for Marriage");
+		}else {
+			throw new MinorException("MinorException");
+		}
+	}
+	}
+  ============================================================================================
+  package techno.java.corejava.exception.assignmentex;
+
+import java.util.Scanner;
+
+public class MainException  {
+public static void main(String[] args) throws UserMinorException {
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter your Age :");
+	int age1=sc.nextInt();
+	Age age=new Age(age1);
+	age.agecal(age1);
+
+	
+}
+}

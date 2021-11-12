@@ -1,0 +1,147 @@
+package techno.java.assign.calculator;
+
+public class Calculator {
+public double numberOne;
+public double numberTwo;
+public Calculator(double numberOne, double numberTwo) {
+	super();
+	this.numberOne = numberOne;
+	this.numberTwo = numberTwo;
+}
+public double add(double number1,double number2) throws AddException {
+	if(number1>0&&number2>0) {
+		double result = number1+number2;
+	return result;
+	}else {
+		throw new AddException("AddException");
+	}
+	
+}
+public double subtract(double number1,double number2) throws SubtractException {
+	if(number1>0&&number2<number1&&number2>0) {
+		double result = number1-number2;
+	return result;
+	}else {
+		throw new SubtractException("SubtractException");
+	}
+	
+}
+public double division(double number1,double number2) throws DivisionException {
+	if(number1>0&&number2<number1&&number2>0) {
+		double result = number1-number2;
+	return result;
+	}else {
+		throw new DivisionException("DivisionException");
+	}
+	
+}
+public double Multiplication(double number1,double number2) throws MultiplicationException {
+	if(number1>0&&number2>0) {
+		double result = number1*number2;
+	return result;
+	}else {
+		throw new MultiplicationException("MultiplicationException");
+	}
+	
+}
+
+}
+===========================================================================================================
+package techno.java.assign.calculator;
+
+public class AddException extends Exception {
+	String meg;
+
+	public AddException(String mag) {
+		super();
+		this.meg = meg;
+	}
+	@Override
+	public String getMessage() {
+		return meg;
+	}
+}
+=================================================================
+package techno.java.assign.calculator;
+
+public class SubtractException extends Exception {
+	String meg;
+
+	public SubtractException(String mag) {
+		super();
+		this.meg = meg;
+	}
+	@Override
+	public String getMessage() {
+		return meg;
+	}
+}
+================================================================
+package techno.java.assign.calculator;
+
+public class MultiplicationException extends Exception {
+	String meg;
+
+	public MultiplicationException(String mag) {
+		super();
+		this.meg = meg;
+	}
+	@Override
+	public String getMessage() {
+		return meg;
+	}
+}
+======================================================================
+package techno.java.assign.calculator;
+
+public class DivisionException extends Exception {
+	String meg;
+
+	public DivisionException(String mag) {
+		super();
+		this.meg = meg;
+	}
+	@Override
+	public String getMessage() {
+		return meg;
+	}
+}
+========================================================================
+package techno.java.assign.calculator;
+
+public class NegativeInputException extends Exception {
+String meg;
+
+public NegativeInputException(String mag) {
+	super();
+	this.meg = meg;
+}
+@Override
+public String getMessage() {
+	return meg;
+}
+}
+====================================================================
+package techno.java.assign.calculator;
+
+import java.util.Scanner;
+
+public class MainCalculator {
+public static void main(String[] args) throws AddException, SubtractException, DivisionException, MultiplicationException {
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter First Number :");
+	double FirstNum=sc.nextDouble();
+	System.out.println("Enter Second Number :");
+	double SecondNum=sc.nextDouble();
+	Calculator calculator=new Calculator(FirstNum, SecondNum);
+	System.out.println("Which Operation you want to perform \n1.Addition\n2.Subtraction\n3.Division\n4.Multiplication");
+	int which=sc.nextInt();
+	switch(which) {
+	case 1:System.out.println(FirstNum +" + "+SecondNum+" = "+calculator.add(FirstNum, SecondNum)); break;
+	case 2:System.out.println(FirstNum +" - "+SecondNum+" = "+calculator.subtract(FirstNum, SecondNum)); break;
+	case 3:System.out.println(FirstNum +" / "+SecondNum+" = "+calculator.division(FirstNum, SecondNum)); break;
+	case 4:System.out.println(FirstNum +" * "+SecondNum+" = "+calculator.Multiplication(FirstNum, SecondNum)); break;
+	default :System.out.println("Invalid Input");
+	}	
+}
+}
