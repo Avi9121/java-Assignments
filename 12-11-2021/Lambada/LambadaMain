@@ -1,0 +1,9 @@
+package com.technoelevte.assignments.lambada;
+
+public class LambadaMain {
+	public static void main(String[] args) {
+		Car car=(String carName)->{System.out.println("Price of "+carName+" is : "+7+","+50+",000Rs");};
+		car.knowCar("Audi");
+	}
+
+}
