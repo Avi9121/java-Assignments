@@ -1,0 +1,6 @@
+package com.technoelevte.assignments.lambada;
+
+public interface Car {
+	void knowCar(String carName);
+
+}

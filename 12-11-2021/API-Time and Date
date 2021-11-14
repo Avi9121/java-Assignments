@@ -1,0 +1,31 @@
+For example, the existing classes (such as java.util.Date and SimpleDateFormatter) aren’t thread-safe, leading to potential concurrency issues 
+for users—not something the average developer would expect to deal with when writing date-handling code.
+
+Some of the date and time classes also exhibit quite poor API design. For example, years in java.util.Date start at 1900, months start at 1, 
+and days start at 0—not very intuitive.
+
+These issues, and several others, have led to the popularity of third-party date and time libraries, such as Joda-Time.
+
+In order to address these problems and provide better support in the JDK core, a new date and time API, which is free of these problems, 
+has been designed for Java SE 8.
+
+The project has been led jointly by the author of Joda-Time (Stephen Colebourne) and Oracle, under JSR 310, and will appear in the new Java SE 8 
+package java.time.
+
+Core Ideas
+The new API is driven by three core ideas: 
+
+Immutable-value classes. One of the serious weaknesses of the existing formatters in Java is that they aren’t thread-safe. This puts the burden 
+on developers to use them in a thread-safe manner and to think about concurrency problems in their day-to-day development of date-handling code. 
+The new API avoids this issue by ensuring that all its core classes are immutable and represent well-defined values.
+Domain-driven design. The new API models its domain very precisely with classes that represent different use cases for Date and Time closely. 
+This differs from previous Java libraries that were quite poor in that regard. For example, java.util.Date represents an instant on the 
+timeline—a wrapper around the number of milli-seconds since the UNIX epoch—but if you call toString(), the result suggests that it has a time 
+zone, causing confusion among developers.
+
+This emphasis on domain-driven design offers long-term benefits around clarity and understandability, but you might need to think through your 
+application’s domain model of dates when porting from previous APIs to Java SE 8.
+
+Separation of chronologies. The new API allows people to work with different calendaring systems in order to support the needs of users in some 
+areas of the world, such as Japan or Thailand, that don’t necessarily follow ISO-8601. It does so without imposing additional burden on the 
+majority of developers, who need to work only with the standard chronology. 
