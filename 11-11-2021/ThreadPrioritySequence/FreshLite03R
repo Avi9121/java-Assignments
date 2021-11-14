@@ -1,0 +1,11 @@
+package com.technoelevte.assignments.equencethreadpriority;
+
+public class FreshLite03R implements Runnable{
+
+	@Override
+	public void run() {
+		System.out.print("TestYantra");
+		
+	}
+
+}
