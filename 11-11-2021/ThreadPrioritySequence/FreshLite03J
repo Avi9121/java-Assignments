@@ -1,0 +1,10 @@
+package com.technoelevte.assignments.equencethreadpriority;
+
+public class FreshLite03J {
+	@Override
+	public void run() {
+		System.out.print("Hi,Everyone ");
+		
+	}
+
+}
