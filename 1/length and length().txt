@@ -1,0 +1,44 @@
+length vs length()
+
+1. The length variable is applicable to an array but not for string objects whereas the length() method is applicable for string objects but not for arrays.
+
+
+2.Examples
+
+// length can be used for int[], double[], String[] 
+// to know the length of the arrays.
+
+// length() can be used for String, StringBuilder, etc 
+// String class related Objects to know the length of the String
+
+
+3. To directly access a field member of an array we can use .length; whereas .length() invokes a method to access a field member.
+
+public class Test {
+    public static void main(String[] args)
+    {
+        // Here array is the array name of int type
+        int[] array = new int[4];
+        System.out.println("The size of the array is "
+                           + array.length);
+ 
+        // Here str is a string object
+        String str = "Avinash";
+        System.out.println("The size of the String is "
+                           + str.length());
+    }
+}
+
+
+
+4. public class Test {
+    public static void main(String[] args)
+    {
+        // Here str is the array name of String type.
+        String[] str = { "abhi", "avinash", "TechnoElevate" };
+        System.out.println(str.length);
+    }
+}
+
+
+5. 
