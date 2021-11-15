@@ -3,7 +3,7 @@ import java.util.TreeMap;
 
 public class HashMapToTreeMap {
 public static void main(String[] args) {
-	MapDec dec=new MapDec();
+	HashMapToTreeMap dec=new HashMapToTreeMap();
 	HashMap<Integer,String> map=new HashMap<Integer,String>();
 	map.put(301, "Sandesh");
 	map.put(304, "ganesh");
